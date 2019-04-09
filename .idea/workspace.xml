@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1a0900e-fe24-4635-95ab-2f794ba9cb31" name="Default Changelist" comment="We have finished preprocessing the data. We are now ready to begin building a model around the data. (ELL)">
+    <list default="true" id="a1a0900e-fe24-4635-95ab-2f794ba9cb31" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PUBG_Analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PUBG_Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PUBG_Preprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Preprocessing.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,22 +18,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+            <state relative-caret-position="323">
+              <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
               <folding>
-                <element signature="e#77#86#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#76#109#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,7 +67,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -90,11 +78,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -285,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554404646732</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="I made some helpful changes to the preprocessing notebook that will split the training and validation into separate files for us. I also am going to push up a copy of the 'PUBG_Analysis' file as an IPYNB. This way we have both the notebook version and the .py version. Also the simple model we built is producing mediocre results, we will begin to optimize this.">
+      <created>1554670683776</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1554670683776</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -301,12 +297,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17761394" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.91230553" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5572843" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -338,7 +334,8 @@
     <MESSAGE value="Committing Data" />
     <MESSAGE value="More pre-processing done on the data. (ELL)" />
     <MESSAGE value="We have finished preprocessing the data. We are now ready to begin building a model around the data. (ELL)" />
-    <option name="LAST_COMMIT_MESSAGE" value="We have finished preprocessing the data. We are now ready to begin building a model around the data. (ELL)" />
+    <MESSAGE value="I made some helpful changes to the preprocessing notebook that will split the training and validation into separate files for us. I also am going to push up a copy of the 'PUBG_Analysis' file as an IPYNB. This way we have both the notebook version and the .py version. Also the simple model we built is producing mediocre results, we will begin to optimize this." />
+    <option name="LAST_COMMIT_MESSAGE" value="I made some helpful changes to the preprocessing notebook that will split the training and validation into separate files for us. I also am going to push up a copy of the 'PUBG_Analysis' file as an IPYNB. This way we have both the notebook version and the .py version. Also the simple model we built is producing mediocre results, we will begin to optimize this." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PUBG_Preprocessing.ipynb">
@@ -363,13 +360,7 @@
     <entry file="file://D:/Desktop/Udemy_Classes/365 Careers/365 Career Exercises/MNIST-Digits Analysis.ipynb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/CS_395_Final_Project/Lib/site-packages/pandas/core/indexes/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="4964" selection-start-line="4964" selection-end-line="4964" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/CS_395_Final_Project/Lib/site-packages/pandas/core/indexes/base.py" />
     <entry file="file://$PROJECT_DIR$/data_1d.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -377,36 +368,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model.ipynb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Packages/Microsoft.MicrosoftEdge_8wekyb3d8bbwe/TempState/Downloads/Model (1).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-          <folding>
-            <element signature="e#77#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Model.ipynb" />
+    <entry file="file://$USER_HOME$/AppData/Local/Packages/Microsoft.MicrosoftEdge_8wekyb3d8bbwe/TempState/Downloads/Model (1).py" />
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PUBG_Analysis.ipynb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+          <folding>
+            <element signature="e#76#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
