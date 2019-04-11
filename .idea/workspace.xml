@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a0900e-fe24-4635-95ab-2f794ba9cb31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PUBG_Analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PUBG_Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Analysis.py" afterDir="false" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+            <state relative-caret-position="136">
+              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
               <folding>
                 <element signature="e#76#109#0" expanded="true" />
               </folding>
@@ -281,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554670683776</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Quick Commit.">
+      <created>1554842338839</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1554842338839</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -297,7 +303,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1997319" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -335,7 +341,8 @@
     <MESSAGE value="More pre-processing done on the data. (ELL)" />
     <MESSAGE value="We have finished preprocessing the data. We are now ready to begin building a model around the data. (ELL)" />
     <MESSAGE value="I made some helpful changes to the preprocessing notebook that will split the training and validation into separate files for us. I also am going to push up a copy of the 'PUBG_Analysis' file as an IPYNB. This way we have both the notebook version and the .py version. Also the simple model we built is producing mediocre results, we will begin to optimize this." />
-    <option name="LAST_COMMIT_MESSAGE" value="I made some helpful changes to the preprocessing notebook that will split the training and validation into separate files for us. I also am going to push up a copy of the 'PUBG_Analysis' file as an IPYNB. This way we have both the notebook version and the .py version. Also the simple model we built is producing mediocre results, we will begin to optimize this." />
+    <MESSAGE value="Quick Commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick Commit." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PUBG_Preprocessing.ipynb">
@@ -385,8 +392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+        <state relative-caret-position="136">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding>
             <element signature="e#76#109#0" expanded="true" />
           </folding>

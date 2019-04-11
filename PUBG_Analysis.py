@@ -1,15 +1,11 @@
 # This file will contain the neural network that analyzes the PUBG Dataset.
 from time import gmtime, strftime
-# import os
 import tensorflow as tf
 import pandas as pd
 
-# Turning warning and info messages off:
-# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
 
 # Importing Data:
-print("Importing Data: " + str(strftime("%Y-%m-%d %H:%M:%S", gmtime())))
+print("Importing Data: ")
 pd.set_option('display.max_columns', None)
 train_data = pd.read_csv("D:\\PUBG_preprocessed_training_data.csv")
 validation_data = pd.read_csv("D:\\PUBG_preprocessed_validation_data.csv")
@@ -29,7 +25,7 @@ print("\nBegin Training: " + str(strftime("%Y-%m-%d %H:%M:%S", gmtime())))
 # Setting Constants:
 input_size = 66
 output_size = 1
-hidden_layer_size = 50#150
+hidden_layer_size = 50
 
 # Building the Model:
 tf.reset_default_graph()
@@ -49,19 +45,19 @@ weights_3 = tf.get_variable("Weights_3", [hidden_layer_size, hidden_layer_size])
 biases_3 = tf.get_variable("Biases_3", [hidden_layer_size])
 outputs_3 = tf.nn.relu(tf.matmul(outputs_2, weights_3) + biases_3)
 
-# weights_4 = tf.get_variable("Weights_4", [hidden_layer_size, hidden_layer_size])
-# biases_4 = tf.get_variable("Biases_4", [hidden_layer_size])
-# outputs_4 = tf.nn.relu(tf.matmul(outputs_3, weights_4) + biases_4)
-#
-# weights_5 = tf.get_variable("Weights_5", [hidden_layer_size, hidden_layer_size])
-# biases_5 = tf.get_variable("Biases_5", [hidden_layer_size])
-# outputs_5 = tf.nn.relu(tf.matmul(outputs_4, weights_5) + biases_5)
+weights_4 = tf.get_variable("Weights_4", [hidden_layer_size, hidden_layer_size])
+biases_4 = tf.get_variable("Biases_4", [hidden_layer_size])
+outputs_4 = tf.nn.relu(tf.matmul(outputs_3, weights_4) + biases_4)
+
+weights_5 = tf.get_variable("Weights_5", [hidden_layer_size, hidden_layer_size])
+biases_5 = tf.get_variable("Biases_5", [hidden_layer_size])
+outputs_5 = tf.nn.relu(tf.matmul(outputs_4, weights_5) + biases_5)
 
 weights_final = tf.get_variable("Weights_Final", [hidden_layer_size, output_size])
 biases_final = tf.get_variable("Biases_Final", [output_size])
 output = tf.nn.relu(tf.matmul(outputs_3, weights_final) + biases_final)
 
-mean_loss = tf.losses.mean_squared_error(labels=targets, predictions=output)
+# mean_loss = tf.losses.mean_squared_error(labels=targets, predictions=output)
 abs_mean_loss = tf.reduce_mean(tf.losses.absolute_difference(labels=targets, predictions=output))
 
 optimize = tf.train.AdamOptimizer(learning_rate=0.0001).minimize(abs_mean_loss)
@@ -76,17 +72,15 @@ prev_validation_loss = 9999999
 sess.run(initializer)
 epoch = 1
 while True:
-    _, square_loss, absolute_loss = sess.run([optimize, mean_loss, abs_mean_loss],
-                                             feed_dict={inputs: train_inputs, targets: train_targets})
+    _, absolute_loss = sess.run([optimize, abs_mean_loss], feed_dict={inputs: train_inputs, targets: train_targets})
 
-    validation_square_loss, validation_absolute_loss = sess.run([mean_loss, abs_mean_loss],
-                                                                feed_dict={inputs: validation_inputs,
-                                                                           targets: validation_targets})
+    validation_absolute_loss = sess.run(abs_mean_loss, feed_dict={inputs: validation_inputs,
+                                                                  targets: validation_targets})
 
     print('Epoch ' + str(epoch) +
-          '. Training Square Loss: ' + '{0:.5f}'.format(square_loss) +
+          #'. Training Square Loss: ' + '{0:.5f}'.format(square_loss) +
           '. Training Abs Loss: ' + '{0:.5f}'.format(absolute_loss) +
-          '. Validation Square Loss: ' + '{0:.5f}'.format(validation_square_loss) +
+          #'. Validation Square Loss: ' + '{0:.5f}'.format(validation_square_loss) +
           '. Validation Abs Loss: ' + '{0:.5f}'.format(validation_absolute_loss))
 
     if validation_absolute_loss > prev_validation_loss:
