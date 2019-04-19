@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a0900e-fe24-4635-95ab-2f794ba9cb31" name="Default Changelist" comment="This commit will be the last one that contains updates for the 'PUBG_Analysis.ipynb' file. Jupyter seems to be causing issues when running the model, thus we will be switching to Pycharm and the 'PUBG_Analysis.py' file to continue optimizing the model. Also, this commit contains some word documents that were required by the instructor describing the problem we are trying to solve. Lastly, and most importantly, this commit also contains the 'PUBG_Batching_Class.py' file. This file is a Class Kevin and I wrote to handle batch training for our model.">
-      <change afterPath="$PROJECT_DIR$/CS_395_Project_WriteUpPart_1.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS_395_Project_WriteUpPart_2.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PUBG_Batching_Class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bash.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Bash.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PUBG_Analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PUBG_Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Analysis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,10 +14,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PUBG_Batching_Class.py">
+        <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-208">
-              <caret line="13" column="113" selection-start-line="13" selection-start-column="113" selection-end-line="13" selection-end-column="113" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XGBoost Model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,7 +51,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Final_Project_Branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -51,15 +61,18 @@
         <option value="$PROJECT_DIR$/bash.sh" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$USER_HOME$/AppData/Local/Packages/Microsoft.MicrosoftEdge_8wekyb3d8bbwe/TempState/Downloads/Model (1).py" />
-        <option value="$PROJECT_DIR$/PUBG_Analysis.py" />
         <option value="$PROJECT_DIR$/Bash.sh" />
         <option value="$PROJECT_DIR$/PUBG_Batching_Class.py" />
+        <option value="$PROJECT_DIR$/PUBG_Preprocessing.py" />
+        <option value="$PROJECT_DIR$/XGBoost Model.py" />
+        <option value="$PROJECT_DIR$/PUBG_Analysis.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="870" />
-    <option name="width" value="1060" />
+    <option name="x" value="717" />
+    <option name="y" value="12" />
+    <option name="width" value="1209" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -132,7 +145,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="XGBoost Model" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CS_395_Final_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,7 +157,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XGBoost Model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,7 +169,7 @@
     <list>
       <item itemvalue="Bash.Bash" />
       <item itemvalue="Python.PUBG_Analysis" />
-      <item itemvalue="Python.test" />
+      <item itemvalue="Python.XGBoost Model" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -303,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555373228756</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="This commit will be the last one that contains updates for the 'PUBG_Analysis.ipynb' file. Jupyter seems to be causing issues when running the model, thus we will be switching to Pycharm and the 'PUBG_Analysis.py' file to continue optimizing the model. Also, this commit contains some word documents that were required by the instructor describing the problem we are trying to solve. Lastly, and most importantly, this commit also contains the 'PUBG_Batching_Class.py' file. This file is a Class Kevin and I wrote to handle batch training for our model.">
+      <created>1555373618619</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1555373618619</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -319,7 +339,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20509383" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1494638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -363,9 +383,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="This commit will be the last one that contains updates for the 'PUBG_Analysis.ipynb' file. Jupyter seems to be causing issues when running the model, thus we will be switching to Pycharm and the 'PUBG_Analysis.py' file to continue optimizing the model. Also, this commit contains some word documents that were required by the instructor describing the problem we are trying to solve. Lastly, and most importantly, this commit also contains the 'PUBG_Batching_Class.py' file. This file is a Class Kevin and I wrote to handle batch training for our model." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PUBG_Preprocessing.ipynb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -379,34 +396,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/CS_395_Final_Project/Lib/site-packages/pandas/core/indexes/base.py" />
-    <entry file="file://$PROJECT_DIR$/data_1d.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data_1d.csv" />
     <entry file="file://$PROJECT_DIR$/Model.ipynb" />
     <entry file="file://$USER_HOME$/AppData/Local/Packages/Microsoft.MicrosoftEdge_8wekyb3d8bbwe/TempState/Downloads/Model (1).py" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/PUBG_Analysis.ipynb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Bash.sh">
       <provider selected="true" editor-type-id="text-editor">
@@ -417,8 +412,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PUBG_Batching_Class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="13" column="113" selection-start-line="13" selection-start-column="113" selection-end-line="13" selection-end-column="113" />
+        <state relative-caret-position="612">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PUBG_Preprocessing.ipynb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14637" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PUBG_Preprocessing.py" />
+    <entry file="file://$PROJECT_DIR$/../PUBG_Preprocessing_With_Feature_Engineering.ipynb" />
+    <entry file="file://$USER_HOME$/CS_395_Final_Project/Lib/site-packages/sklearn/metrics/scorer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/CS_395_Final_Project/Lib/site-packages/sklearn/model_selection/_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2120">
+          <caret line="653" selection-start-line="653" selection-end-line="653" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/CS_395_Final_Project/Lib/site-packages/sklearn/model_selection/_validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="865">
+          <caret line="541" selection-start-line="541" selection-end-line="541" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PUBG_Analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XGBoost Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
