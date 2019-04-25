@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1a0900e-fe24-4635-95ab-2f794ba9cb31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PUBG_Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PUBG_Analysis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -317,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555648215797</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Current most optimized model. I also implemented a saver object so that the weights could be saved for testing.">
+      <created>1556207174276</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1556207174276</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -415,7 +421,8 @@
     <MESSAGE value="The &quot;PUBG_Analysis.ipynb&quot; will show the output of the current model. We currently have a decent mean absolute error. The next goal is to reduce that even further by implementing things like: dropout, regularization, a deeper net... The regular &quot;PUBG_Analysis.py&quot; file just reflects the changes made in the notebook." />
     <MESSAGE value="This commit will be the last one that contains updates for the 'PUBG_Analysis.ipynb' file. Jupyter seems to be causing issues when running the model, thus we will be switching to Pycharm and the 'PUBG_Analysis.py' file to continue optimizing the model. Also, this commit contains some word documents that were required by the instructor describing the problem we are trying to solve. Lastly, and most importantly, this commit also contains the 'PUBG_Batching_Class.py' file. This file is a Class Kevin and I wrote to handle batch training for our model." />
     <MESSAGE value="Kevin and I updated the model further by adding a learning rate schedule and also we manipulated the hidden layer sizes. This model produced our best results so far." />
-    <option name="LAST_COMMIT_MESSAGE" value="Kevin and I updated the model further by adding a learning rate schedule and also we manipulated the hidden layer sizes. This model produced our best results so far." />
+    <MESSAGE value="Current most optimized model. I also implemented a saver object so that the weights could be saved for testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Current most optimized model. I also implemented a saver object so that the weights could be saved for testing." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
