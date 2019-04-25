@@ -1,6 +1,7 @@
 import tensorflow as tf
 from time import localtime, strftime
 from PUBG_Batching_Class import PUBG_Data_Reader
+# thsi is  a test to see if it shows up in the master.
 
 batch_size = 100
 
