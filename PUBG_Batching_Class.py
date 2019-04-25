@@ -12,7 +12,7 @@ class PUBG_Data_Reader():
         train = pd.read_csv(dataset)
         
         # Two variables that take the values of the inputs and the targets. Inputs are floats, targets are floats
-        self.inputs, self.targets = pd.DataFrame(train.iloc[:, 2:68]), pd.DataFrame(train.iloc[:, -1])
+        self.inputs, self.targets = pd.DataFrame(train.iloc[:, 2:-1]), pd.DataFrame(train.iloc[:, -1])
         self.inputs_shape = self.inputs.shape
         self.targets_shape = self.targets.shape
         
