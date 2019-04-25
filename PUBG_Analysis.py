@@ -10,8 +10,14 @@ validation_data = PUBG_Data_Reader('PUBG_preprocessed_validation_data.csv')
 # Setting Constants
 input_size = 66
 output_size = 1
-hidden_layer_size = 200
-# Update: Current Set up is the best predictor thus far.
+hidden_layer_size = 400
+
+# Update 4/19/19: best predictor: 5 hidden layers with nodes staring at 200, 200, 100, 50, 25, 1.
+# Sigmoid activations, eta=0.001, batch size 100 and optimizing based off of abs_mean_loss.
+
+# Update: 4/20/19: Current best predictor is 5 hidden layers with nodes starting at 400, 400, 200, 100, 50, 1.
+# # Sigmoid activations, eta=0.001, batch size 100 and optimizing based off of abs_mean_loss. Loss got to
+# 0.06493.
 
 # Building the Model
 tf.reset_default_graph()
@@ -38,25 +44,25 @@ outputs_4 = tf.nn.sigmoid(tf.matmul(outputs_3, weights_4) + biases_4)
 weights_5 = tf.get_variable("Weights_5", [hidden_layer_size // 4, hidden_layer_size // 8])
 biases_5 = tf.get_variable("Biases_5", [hidden_layer_size // 8])
 outputs_5 = tf.nn.sigmoid(tf.matmul(outputs_4, weights_5) + biases_5)
-
-# weights_6 = tf.get_variable("Weights_6", [hidden_layer_size, hidden_layer_size])
-# biases_6 = tf.get_variable("Biases_6", [hidden_layer_size])
+#
+# weights_6 = tf.get_variable("Weights_6", [hidden_layer_size // 4, hidden_layer_size // 4])
+# biases_6 = tf.get_variable("Biases_6", [hidden_layer_size // 4])
 # outputs_6 = tf.nn.sigmoid(tf.matmul(outputs_5, weights_6) + biases_6)
 #
-# weights_7 = tf.get_variable("Weights_7", [hidden_layer_size, hidden_layer_size])
-# biases_7 = tf.get_variable("Biases_7", [hidden_layer_size])
+# weights_7 = tf.get_variable("Weights_7", [hidden_layer_size // 4, hidden_layer_size // 8])
+# biases_7 = tf.get_variable("Biases_7", [hidden_layer_size // 8])
 # outputs_7 = tf.nn.sigmoid(tf.matmul(outputs_6, weights_7) + biases_7)
 #
-# weights_8 = tf.get_variable("Weights_8", [hidden_layer_size, hidden_layer_size])
-# biases_8 = tf.get_variable("Biases_8", [hidden_layer_size])
+# weights_8 = tf.get_variable("Weights_8", [hidden_layer_size // 8, hidden_layer_size // 8])
+# biases_8 = tf.get_variable("Biases_8", [hidden_layer_size // 8])
 # outputs_8 = tf.nn.sigmoid(tf.matmul(outputs_7, weights_8) + biases_8)
 #
-# weights_9 = tf.get_variable("Weights_9", [hidden_layer_size, hidden_layer_size])
-# biases_9 = tf.get_variable("Biases_9", [hidden_layer_size])
+# weights_9 = tf.get_variable("Weights_9", [hidden_layer_size // 8, hidden_layer_size // 16])
+# biases_9 = tf.get_variable("Biases_9", [hidden_layer_size // 16])
 # outputs_9 = tf.nn.sigmoid(tf.matmul(outputs_8, weights_9) + biases_9)
 #
-# weights_10 = tf.get_variable("Weights_10", [hidden_layer_size, hidden_layer_size])
-# biases_10 = tf.get_variable("Biases_10", [hidden_layer_size])
+# weights_10 = tf.get_variable("Weights_10", [hidden_layer_size // 16, hidden_layer_size // 16])
+# biases_10 = tf.get_variable("Biases_10", [hidden_layer_size // 16])
 # outputs_10 = tf.nn.sigmoid(tf.matmul(outputs_9, weights_10) + biases_10)
 
 # weights_11 = tf.get_variable("Weights_11", [hidden_layer_size, hidden_layer_size])
@@ -124,6 +130,10 @@ initializer = tf.global_variables_initializer()
 
 prev_validation_loss = 9999999
 
+# Implementing a saver
+saver = tf.train.Saver()
+save_path = "C:\\Users\\retic\Desktop\CS_395_Final_Project\\Curr_Best_Model.ckpt"
+
 
 sess.run(initializer)
 print("\n\nRunning Algorithm: ")
@@ -167,6 +177,10 @@ while True:
     else:
         counter = 0
         print("Counter Reset.")
+        saver.save(sess=sess, save_path=save_path)
+    if abs(validation_absolute_loss - prev_validation_loss) < 10**(-11):
+        print("Validation loss is hardly changing. \nEarly Stopping Activated.")
+        break
     if counter > 2:
         print("Early Stopping Activated.\n")
         break
@@ -175,6 +189,8 @@ while True:
     epoch += 1
 
 print("End of Training.")
+print("Saving model to directory:")
+saver.save(sess=sess, save_path=save_path)
 print("End Time: " + str(strftime("%Y-%m-%d %H:%M:%S", localtime())))
 sess.close()
 
