@@ -46,66 +46,6 @@ outputs_4 = tf.nn.sigmoid(tf.matmul(outputs_3, weights_4) + biases_4)
 weights_5 = tf.get_variable("Weights_5", [hidden_layer_size // 4, hidden_layer_size // 8])
 biases_5 = tf.get_variable("Biases_5", [hidden_layer_size // 8])
 outputs_5 = tf.nn.sigmoid(tf.matmul(outputs_4, weights_5) + biases_5)
-#
-# weights_6 = tf.get_variable("Weights_6", [hidden_layer_size // 4, hidden_layer_size // 4])
-# biases_6 = tf.get_variable("Biases_6", [hidden_layer_size // 4])
-# outputs_6 = tf.nn.sigmoid(tf.matmul(outputs_5, weights_6) + biases_6)
-#
-# weights_7 = tf.get_variable("Weights_7", [hidden_layer_size // 4, hidden_layer_size // 8])
-# biases_7 = tf.get_variable("Biases_7", [hidden_layer_size // 8])
-# outputs_7 = tf.nn.sigmoid(tf.matmul(outputs_6, weights_7) + biases_7)
-#
-# weights_8 = tf.get_variable("Weights_8", [hidden_layer_size // 8, hidden_layer_size // 8])
-# biases_8 = tf.get_variable("Biases_8", [hidden_layer_size // 8])
-# outputs_8 = tf.nn.sigmoid(tf.matmul(outputs_7, weights_8) + biases_8)
-#
-# weights_9 = tf.get_variable("Weights_9", [hidden_layer_size // 8, hidden_layer_size // 16])
-# biases_9 = tf.get_variable("Biases_9", [hidden_layer_size // 16])
-# outputs_9 = tf.nn.sigmoid(tf.matmul(outputs_8, weights_9) + biases_9)
-#
-# weights_10 = tf.get_variable("Weights_10", [hidden_layer_size // 16, hidden_layer_size // 16])
-# biases_10 = tf.get_variable("Biases_10", [hidden_layer_size // 16])
-# outputs_10 = tf.nn.sigmoid(tf.matmul(outputs_9, weights_10) + biases_10)
-
-# weights_11 = tf.get_variable("Weights_11", [hidden_layer_size, hidden_layer_size])
-# biases_11 = tf.get_variable("Biases_11", [hidden_layer_size])
-# outputs_11 = tf.nn.sigmoid(tf.matmul(outputs_10, weights_11) + biases_11)
-#
-# weights_12 = tf.get_variable("Weights_12", [hidden_layer_size, hidden_layer_size])
-# biases_12 = tf.get_variable("Biases_12", [hidden_layer_size])
-# outputs_12 = tf.nn.sigmoid(tf.matmul(outputs_11, weights_12) + biases_12)
-#
-# weights_13 = tf.get_variable("Weights_13", [hidden_layer_size, hidden_layer_size])
-# biases_13 = tf.get_variable("Biases_13", [hidden_layer_size])
-# outputs_13 = tf.nn.sigmoid(tf.matmul(outputs_12, weights_13) + biases_13)
-#
-# weights_14 = tf.get_variable("Weights_14", [hidden_layer_size, hidden_layer_size])
-# biases_14 = tf.get_variable("Biases_14", [hidden_layer_size])
-# outputs_14 = tf.nn.sigmoid(tf.matmul(outputs_13, weights_14) + biases_14)
-#
-# weights_15 = tf.get_variable("Weights_15", [hidden_layer_size, hidden_layer_size])
-# biases_15 = tf.get_variable("Biases_15", [hidden_layer_size])
-# outputs_15 = tf.nn.sigmoid(tf.matmul(outputs_14, weights_15) + biases_15)
-
-# weights_16 = tf.get_variable("Weights_16", [hidden_layer_size, hidden_layer_size])
-# biases_16 = tf.get_variable("Biases_16", [hidden_layer_size])
-# outputs_16 = tf.nn.relu(tf.matmul(outputs_15, weights_16) + biases_16)
-
-# weights_17 = tf.get_variable("Weights_17", [hidden_layer_size, hidden_layer_size])
-# biases_17 = tf.get_variable("Biases_17", [hidden_layer_size])
-# outputs_17 = tf.nn.relu(tf.matmul(outputs_16, weights_17) + biases_17)
-
-# weights_18 = tf.get_variable("Weights_18", [hidden_layer_size, hidden_layer_size])
-# biases_18 = tf.get_variable("Biases_18", [hidden_layer_size])
-# outputs_18 = tf.nn.relu(tf.matmul(outputs_17, weights_18) + biases_18)
-
-# weights_19 = tf.get_variable("Weights_19", [hidden_layer_size, hidden_layer_size])
-# biases_19 = tf.get_variable("Biases_19", [hidden_layer_size])
-# outputs_19 = tf.nn.relu(tf.matmul(outputs_18, weights_19) + biases_19)
-
-# weights_20 = tf.get_variable("Weights_20", [hidden_layer_size, hidden_layer_size])
-# biases_20 = tf.get_variable("Biases_20", [hidden_layer_size])
-# outputs_20 = tf.nn.relu(tf.matmul(outputs_19, weights_20) + biases_20)
 
 weights_final = tf.get_variable("Weights_Final", [hidden_layer_size // 8, output_size])
 biases_final = tf.get_variable("Biases_Final", [output_size])
@@ -142,10 +82,6 @@ print("\n\nRunning Algorithm: ")
 epoch = 1
 counter = 0
 while True:
-#     _, absolute_loss, squared_loss = sess.run([optimize, abs_mean_loss, mean_loss], feed_dict={inputs: train_inputs, targets: train_targets})
-
-#     validation_absolute_loss = sess.run(abs_mean_loss, feed_dict={inputs: validation_inputs, targets: validation_targets})
-
     curr_square_epoch_loss = 0.
     curr_abs_epoch_loss = 0.
 
